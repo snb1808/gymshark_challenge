@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import CardColumns from "react-bootstrap/CardColumns";
+import { getData } from './adapters/API';
+import ExerciseCard from "./components/ExerciseCard/ExerciseCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { sex: 'female' };
+
+  componentDidMount = () => {
+      getData().then(({ exercises }) =>
+  this.setState({ exercises }));
+  };
+
+  render = () => {
+      const { exercises, sex } = this.state;
+
+      return (
+          <CardColumns>
+              { exercises && exercises.map((exercise, index) =>
+                 <ExerciseCard key={index} exercise={exercise} sex={sex}/>
+              )}
+          </CardColumns>
+  )};
 }
 
 export default App;
