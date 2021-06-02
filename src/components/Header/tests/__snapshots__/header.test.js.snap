@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+"<Navbar bg=\\"light\\" expand=\\"lg\\" sticky=\\"top\\" variant=\\"light\\" collapseOnSelect={false}>
+  <img aria-label=\\"gymshark logo\\" className=\\"header-image\\" src=\\"Gymshark_logo.svg\\" />
+  <NavbarBrand>
+    Exercise List
+  </NavbarBrand>
+  <ForwardRef name=\\"gender-toggle\\" className=\\"mb-2\\" type=\\"radio\\" vertical={false}>
+    <ToggleButton type=\\"radio\\" variant=\\"secondary\\" name=\\"radio\\" value=\\"male\\" checked={false} onChange={[Function: onChange]}>
+      Men
+    </ToggleButton>
+    <ToggleButton type=\\"radio\\" variant=\\"secondary\\" name=\\"radio\\" value=\\"female\\" checked={false} onChange={[Function: onChange]}>
+      Women
+    </ToggleButton>
+  </ForwardRef>
+  <div className=\\"search-container\\">
+    <Form inline={true}>
+      <FormControl type=\\"text\\" placeholder=\\"Search muscle to train\\" className=\\"mr-sm-2\\" onChange={[undefined]} />
+    </Form>
+  </div>
+</Navbar>"
+`;

@@ -13,7 +13,12 @@ class ExerciseCard extends Component {
 
         return (
             <Card role='button' className='exercise-card' onClick={this.handleClick}>
-                <Card.Img aria-role='button' aria-label={`${exercise.name} image`} variant='top' src={exercise[gender].image}/>
+                <Card.Img
+                    aria-role='button'
+                    aria-label={`${exercise.name} image`}
+                    variant='top'
+                    src={exercise[gender].image}
+                />
                 <Card.Body>
                     <Card.Title>{exercise.name}</Card.Title>
                      <ExerciseModal content={exercise} show={this.state.showInfo}/>

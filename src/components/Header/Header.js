@@ -16,8 +16,9 @@ const Header = ({ setGender, gender: selectedGender, filterExercises }) => {
             <img aria-label='gymshark logo' className='header-image' src={logo}/>
             <Navbar.Brand>Exercise List</Navbar.Brand>
             <ToggleButtonGroup name='gender-toggle' className="mb-2">
-                {genders.map(({ gender, text }) => (
+                {genders.map(({ gender, text }, index) => (
                     <ToggleButton
+                        key={index}
                         type='radio'
                         variant='secondary'
                         name='radio'
