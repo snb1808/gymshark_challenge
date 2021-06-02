@@ -12,8 +12,8 @@ class ExerciseCard extends Component {
         const { exercise, gender } = this.props;
 
         return (
-            <Card className='exercise-card' onClick={this.handleClick}>
-                <Card.Img aria-label={`${exercise.name} image`} variant='top' src={exercise[gender].image}/>
+            <Card role='button' className='exercise-card' onClick={this.handleClick}>
+                <Card.Img aria-role='button' aria-label={`${exercise.name} image`} variant='top' src={exercise[gender].image}/>
                 <Card.Body>
                     <Card.Title>{exercise.name}</Card.Title>
                      <ExerciseModal content={exercise} show={this.state.showInfo}/>

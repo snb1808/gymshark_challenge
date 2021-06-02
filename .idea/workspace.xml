@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f954583-3e50-4ca3-8c4c-1c17c191c243" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ExerciseCard/exercise-card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExerciseModal/ExerciseModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExerciseModal/exercise-modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ExerciseCard/ExerciseCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExerciseCard/ExerciseCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExerciseModal/ExerciseModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExerciseModal/ExerciseModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExerciseModal/exercise-modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExerciseModal/exercise-modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622544627874</updated>
-      <workItem from="1622544630946" duration="24514000" />
+      <workItem from="1622544630946" duration="25387000" />
     </task>
     <servers />
   </component>
