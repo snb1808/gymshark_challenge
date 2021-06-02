@@ -1,26 +1,38 @@
 import { Component } from 'react';
-import './App.css';
-import CardColumns from "react-bootstrap/CardColumns";
+import CardColumns from 'react-bootstrap/CardColumns';
 import { getData } from './adapters/API';
-import ExerciseCard from "./components/ExerciseCard/ExerciseCard";
+import ExerciseCard from './components/ExerciseCard/ExerciseCard';
+import Header from "./components/Header/Header";
+import './App.css';
 
 class App extends Component {
-  state = { sex: 'female' };
+  state = { gender: 'female' };
 
   componentDidMount = () => {
-      getData().then(({ exercises }) =>
-  this.setState({ exercises }));
+      getData().then(({ exercises }) => this.setState({ exercises, filteredExercises: exercises }));
+  };
+
+  setGender = (gender) => this.setState({ gender });
+
+  filterExercises = (event) => {
+    this.setState({
+        filteredExercises: this.state.exercises.filter(({ bodyAreas }) =>
+            bodyAreas.toString().toLowerCase().includes(event.target.value.toLowerCase())
+        )});
   };
 
   render = () => {
-      const { exercises, sex } = this.state;
+      const { filteredExercises, gender } = this.state;
 
       return (
-          <CardColumns>
-              { exercises && exercises.map((exercise, index) =>
-                 <ExerciseCard key={index} exercise={exercise} sex={sex}/>
-              )}
-          </CardColumns>
+          <div className='app'>
+              <Header filterExercises={this.filterExercises} setGender={this.setGender} gender={gender}/>
+              <CardColumns>
+                  {filteredExercises && filteredExercises.map((exercise, index) =>
+                     <ExerciseCard key={index} exercise={exercise} gender={gender}/>
+                  )}
+              </CardColumns>
+          </div>
   )};
 }
 

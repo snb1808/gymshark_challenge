@@ -1,0 +1,9 @@
+.modal-button {
+    background-color: darkgrey;
+    border-color: #888888;
+}
+
+.modal-button:hover {
+    border-color: #888888;
+    background-color: dimgray;
+}

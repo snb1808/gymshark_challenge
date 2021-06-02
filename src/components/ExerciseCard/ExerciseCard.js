@@ -1,5 +1,7 @@
-import { Component } from "react";
-import Card from "react-bootstrap/Card";
+import { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import './exercise-card.css';
+import ExerciseModal from '../ExerciseModal/ExerciseModal';
 
 class ExerciseCard extends Component {
     state = { showInfo: false };
@@ -7,17 +9,19 @@ class ExerciseCard extends Component {
     handleClick = () => this.setState({ showInfo: !this.state.showInfo });
 
     render = () => {
-        const { exercise, sex } = this.props;
+        const { exercise, gender } = this.props;
 
         return (
-            <Card onClick={this.handleClick}>
-                <Card.Img variant="top" src={exercise[sex].image}/>
+            <Card className='exercise-card' onClick={this.handleClick}>
+                <Card.Img aria-label={`${exercise.name} image`} variant='top' src={exercise[gender].image}/>
                 <Card.Body>
                     <Card.Title>{exercise.name}</Card.Title>
-                    {this.state.showInfo && <Card.Text dangerouslySetInnerHTML={{__html: exercise.transcript}}/>}
+                     <ExerciseModal content={exercise} show={this.state.showInfo}/>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">{exercise.bodyAreas.toString().split(',').join(', ')}</small>
+                    <small aria-label='body areas' className="text-muted">
+                        {exercise.bodyAreas.toString().split(',').join(', ')}
+                    </small>
                 </Card.Footer>
             </Card>
         )};

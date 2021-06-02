@@ -1,0 +1,46 @@
+.header-image {
+    height: 3rem;
+}
+
+.mb-2 {
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    .mb-2 {
+        margin-top: 1rem;
+    }
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: -webkit-fill-available;
+}
+
+@media (max-width: 991px) {
+    .search-container {
+        width: 95vw;
+        margin-top: 1rem;
+    }
+}
+
+.form-inline {
+    min-width: 20rem;
+}
+
+@media (max-width: 991px) {
+    .form-inline {
+        width: 100%;
+    }
+}
+
+.mr-sm-2.form-control {
+    width: 100%;
+    margin: 0 !important;
+}
+
+
+
+
+
