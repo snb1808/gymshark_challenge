@@ -2,9 +2,11 @@ import { shallow } from 'enzyme';
 import ExerciseCard from '../ExerciseCard';
 
 describe('ExerciseCard', () => {
-    it('should render correctly', () => {
+    let component;
+
+    beforeEach(() => {
         const props = { exercise: {
-            name: 'Bicep Curls',
+                name: 'Bicep Curls',
                 transcript: 'Bicep curls are bicep curls',
                 male: { image: 'www.mensimage.com' },
                 female: { image: 'www.womensimage.com' },
@@ -13,8 +15,17 @@ describe('ExerciseCard', () => {
             gender: 'female',
         };
 
-        const component = shallow(<ExerciseCard {...props}/>);
+        component = shallow(<ExerciseCard {...props}/>);
+    });
 
+    it('should render correctly', () => {
         expect(component.debug()).toMatchSnapshot();
+        expect(component.state().showInfo).toBe(false);
+    });
+
+    it('should set the state for a card when it is clicked', () => {
+        component.simulate('click');
+
+        expect(component.state().showInfo).toBe(true);
     });
 })
