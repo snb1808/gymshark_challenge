@@ -2,8 +2,9 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
+import 'regenerator-runtime/runtime';
 import '@testing-library/jest-dom';
-const Enzyme = require('enzyme');
+import { configure } from 'enzyme';
 const Adapter = require('enzyme-adapter-react-16');
 
-Enzyme.configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() });

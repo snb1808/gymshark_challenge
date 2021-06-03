@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExerciseCard should render correctly 1`] = `
+"<Card role=\\"button\\" className=\\"exercise-card\\" onClick={[Function (anonymous)]} body={false}>
+  <CardImg role=\\"button\\" aria-label=\\"Bicep Curls image\\" variant=\\"top\\" src=\\"www.womensimage.com\\" />
+  <CardBody>
+    <CardTitle>
+      Bicep Curls
+    </CardTitle>
+    <ExerciseModal content={{...}} show={false} />
+  </CardBody>
+  <CardFooter>
+    <small aria-label=\\"body areas\\" className=\\"text-muted\\">
+      Arms, Biceps
+    </small>
+  </CardFooter>
+</Card>"
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExerciseModal should render correctly 1`] = `
+"<Modal content={{...}} size=\\"lg\\" aria-labelledby=\\"modal-title\\" centered={true} backdrop=\\"static\\" keyboard={false} aria-describedby=\\"description\\" show={false} autoFocus={true} enforceFocus={true} restoreFocus={true} animation={true} dialogAs={{...}}>
+  <ModalHeader closeButton={true} closeLabel=\\"Close\\">
+    <ModalTitle id=\\"modal-title\\" tabindex=\\"0\\">
+      Exercise name
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <h4>
+      Directions:
+    </h4>
+    <p id=\\"description\\" dangerouslySetInnerHTML={{...}} />
+  </ModalBody>
+  <ModalFooter>
+    <Button className=\\"modal-button\\" variant=\\"primary\\" active={false} disabled={false}>
+      OK
+    </Button>
+  </ModalFooter>
+</Modal>"
+`;
